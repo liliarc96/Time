@@ -21,7 +21,7 @@ public class Principal {
         Scanner entrada = new Scanner(System.in);
         ArrayList<Jogador> time = new ArrayList<Jogador>();
         
-        for(int i = 1;i <= 11;i++){
+        for(int i = 1;i <= 2;i++){
             System.out.println("Digite o nome, posição, peso, altura e o número da camisa do jogador: ");
             
             String nome = entrada.next();
@@ -32,8 +32,12 @@ public class Principal {
             
             time.add(new Jogador(nome, posicao, peso, altura, numCamisa));
         }
-        for(int i = 0;i <= 10;i++){
-           System.out.println((i+1) + "o jogador: "+ time.get(i)+"\n");
+        for(int i = 0;i <= 1;i++){
+           System.out.println((i+1) + "o jogador: "+ time.get(i).getNome()+"\n"
+           + time.get(i).getPosicao()+"\n"
+           + time.get(i).getPeso()+"\n"
+           + time.get(i).getAltura()+"\n"
+           + time.get(i).getNumCamisa()+"\n");
         }
     }
     
